@@ -4,13 +4,32 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
+        Scanner scanner2 = new Scanner(System.in);
         System.out.println("Enter num one ");
         int numOne = scanner.nextInt();
         System.out.println("Enter num Two ");
         int numTwo = scanner.nextInt();
         int resultOne = add(numOne,numTwo);
         System.out.println(resultOne);
-        scanner.nextLine();
+        System.out.println("Enter your name:");
+        String name = scanner2.nextLine();
+        String resultTwo = greeting(name);
+        System.out.println(resultTwo);
+        System.out.println("Enter num one");
+        int one = scanner.nextInt();
+        System.out.println("Enter num Two ");
+        int two = scanner.nextInt();
+        System.out.println("Enter num Three ");
+        int three = scanner.nextInt();
+        System.out.println("Enter num Four ");
+        int four = scanner.nextInt();
+        int resultThree = add(one,two,three,four);
+        System.out.println(resultThree);
+        System.out.println("What do you want to be printed?");
+        String print = scanner2.nextLine();
+        printMe(print);
+
+
 
     }
 
@@ -18,20 +37,15 @@ public class Main {
         return numOne+numTwo;
     }
 
-    public static String Greeting(String name){
-        return"bonjour,"+name;
-        String Greet= String name;
-        System.out.println(Greet);
-
+    public static String greeting(String name){
+        return "Bonjour, "+name+"!";
     }
     public static int add(int numOne, int numTwo, int numThree, int numFour) {
-        int add1 = add(numOne, numTwo);
-        int add2 = add(add1, numThree);
-        return add(add2, numFour);
+        return add(add(add(numOne,numTwo),numThree),numFour);
     }
     public static void printMe(String toBePrinted) {
         System.out.println(toBePrinted);
     }
-}
-}
 
+}
+//I Vincent, have neither given nor received unauthorized aid on this piece of work.
